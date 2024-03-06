@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtViewBill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="false"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:background="#2196F3"
+        android:minWidth="120dp"
+        android:padding="10dp"
+        android:text="Bill"
+        android:textSize="28sp" />
+
+    <EditText
+        android:id="@+id/edtTxtBillAmnt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignBottom="@id/txtViewBill"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_toRightOf="@id/txtViewBill"
+
+        android:ems="10"
+        android:hint="Enter Bill Amount"
+        android:inputType="number|numberDecimal"
+        android:padding="10dp"
+        android:textSize="28dp" />
+
+    <EditText
+        android:id="@+id/edtTxtTipAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtTxtBillAmnt"
+        android:layout_alignLeft="@id/edtTxtBillAmnt"
+        android:layout_alignRight="@id/edtTxtBillAmnt"
+        android:ems="10"
+        android:hint="Enter % Tip"
+        android:inputType="number"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/txtViewTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtViewBill"
+        android:layout_alignLeft="@id/txtViewBill"
+        android:layout_alignRight="@id/txtViewBill"
+        android:layout_alignParentRight="false"
+        android:layout_marginTop="10dp"
+        android:background="#2196F3"
+        android:text="Tip (%)"
+        android:textSize="30sp" />
+
+    <View
+        android:id="@+id/divHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_below="@id/txtViewTip"
+        android:layout_marginTop="20dp"
+        android:background="#2196F3"
+        android:backgroundTint="#6032B3" />
+
+    <TextView
+        android:id="@+id/TxtViewTotalTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/divHorizontal"
+        android:layout_alignLeft="@id/txtViewBill"
+        android:layout_alignRight="@id/txtViewBill"
+        android:layout_marginTop="10dp"
+
+        android:ems="10"
+        android:inputType="text"
+        android:text="Total Tip"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/txtTotalTipAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/divHorizontal"
+        android:layout_alignLeft="@id/edtTxtTipAmount"
+        android:layout_alignRight="@id/edtTxtTipAmount"
+        android:layout_marginTop="10dp"
+        android:background="#E3DEDE"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/txtTotalBill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TxtViewTotalTip"
+        android:layout_alignLeft="@id/TxtViewTotalTip"
+        android:layout_alignRight="@id/TxtViewTotalTip"
+
+        android:layout_marginTop="10dp"
+        android:text="Total Bill"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/txtTotalBillAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtTotalTipAmount"
+        android:layout_alignLeft="@id/txtTotalTipAmount"
+        android:layout_alignRight="@id/txtTotalTipAmount"
+
+        android:layout_marginTop="10dp"
+        android:background="#E3DEDE"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/btnTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtTotalBill"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="#034071"
+        android:onClick="onClickTipCalc"
+        android:text="Calculate Tip"
+        android:textAllCaps="true" />
+
+</RelativeLayout>
